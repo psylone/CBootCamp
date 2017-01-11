@@ -56,7 +56,7 @@ char*
 toupper_string(char string[])
 {
   int i;
-  char* upcase = malloc(strlen(string) * sizeof(char));
+  char* upcase = malloc((strlen(string) + 1) * sizeof(char));
 
   for (i = 0; i <= strlen(string); i++)
     upcase[i] = toupper(string[i]);
