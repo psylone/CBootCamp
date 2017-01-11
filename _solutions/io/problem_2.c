@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 void  input_string(char title[], char* buffer);
+void  reverse_string(char string[]);
 char* toupper_string(char string[]);
 
 int
@@ -33,6 +34,7 @@ main(int argc, char* argv[])
   for (i = 0; i < 3; i++) {
     char* upcase = toupper_string(strings[i]);
 
+    reverse_string(upcase);
     printf("%s\n", upcase);
     free(upcase);
   }
@@ -56,12 +58,26 @@ char*
 toupper_string(char string[])
 {
   int i;
-  char* upcase = malloc(strlen(string) * sizeof(char));
+  char* upcase = malloc((strlen(string) + 1) * sizeof(char));
 
   for (i = 0; i <= strlen(string); i++)
     upcase[i] = toupper(string[i]);
 
   return upcase;
+}
+
+void
+reverse_string(char string[])
+{
+  int  last_index = strlen(string) - 1;
+  int  i;
+  char c;
+
+  for (i = 0; i < strlen(string) / 2; i++) {
+    c                      = string[i];
+    string[i]              = string[last_index - i];
+    string[last_index - i] = c;
+  }
 }
 
 // Alternative `toupper` implementation
