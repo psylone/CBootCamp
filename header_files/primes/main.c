@@ -2,6 +2,22 @@
 #include <stdlib.h>
 #include "primes.h"
 
+/*
+ * main.c
+ *
+ * Input:
+ *
+ *   Takes one integer argument from the command line.
+ *
+ * Output:
+ *
+ *   Returns 1 if it's a prime number or 0 if not.
+ *
+ * Errors:
+ *
+ *   (1) - No comand line argument was provided.
+ */
+
 int
 main(int argc, char* argv[])
 {
