@@ -7,14 +7,14 @@ int main(int argc, char *argv[]) {
   int n;
 
   if (argc < 2) {
-    printf("error: please provide a non-negative integer argument\n");
+    printf("error (1): please provide a non-negative integer argument\n");
     return 1;
   }
 
   n = atoi(argv[1]);
 
   if (n < 0) {
-    printf("error: non-negative integer is expected\n");
+    printf("error (2): non-negative integer is expected\n");
     return 2;
   }
 
