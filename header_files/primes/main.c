@@ -7,7 +7,7 @@
  *
  * Compile:
  *
- *   gcc -o primes main.c primes.c
+ *   make
  *
  * Input:
  *
