@@ -5,6 +5,10 @@
 /*
  * main.c
  *
+ * Compile:
+ *
+ *   gcc -o primes main.c primes.c
+ *
  * Input:
  *
  *   Takes one integer argument from the command line.
